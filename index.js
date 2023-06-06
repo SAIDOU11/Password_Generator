@@ -92,4 +92,23 @@ const characters = [
   "/",
 ];
 
+let button = document.querySelector(".passwordBtn");
 // 2 random passwords 15 characters long
+let charactersLong = 15;
+let returnValue = "";
+let inputOne = document.querySelector(".inputOne");
+let inputTwo = document.querySelector(".inputTwo");
+
+button.addEventListener("click", (min, max) => {
+  let randomOne = Math.floor(Math.random() * 91);
+  let randomTwo = Math.floor(Math.random() * 91);
+  console.log(characters[randomOne]);
+  console.log(randomTwo);
+});
+
+// function getRandomPassword() {
+
+// }
+// getRandomPassword();
+// console.log(inputOne, inputTwo);
+// inputOne.value += "test";
