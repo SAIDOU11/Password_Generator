@@ -1,3 +1,5 @@
+const charactersLength = 15;
+
 const characters = [
   "A",
   "B",
@@ -93,22 +95,20 @@ const characters = [
 ];
 
 let button = document.querySelector(".passwordBtn");
-// 2 random passwords 15 characters long
-let charactersLong = 15;
-let returnValue = "";
 let inputOne = document.querySelector(".inputOne");
 let inputTwo = document.querySelector(".inputTwo");
 
-button.addEventListener("click", (min, max) => {
-  let randomOne = Math.floor(Math.random() * 91);
-  let randomTwo = Math.floor(Math.random() * 91);
-  console.log(characters[randomOne]);
-  console.log(randomTwo);
+button.addEventListener("click", () => {
+  let returnValue = "";
+  returnValue += characters[Math.floor(Math.random() * characters.length)];
+  while (charactersLength > returnValue.length) {
+    returnValue += characters[Math.floor(Math.random() * characters.length)];
+  }
+  inputOne.value = returnValue;
+  let returnValueTwo = "";
+  while (charactersLength > returnValueTwo.length) {
+    returnValueTwo += characters[Math.floor(Math.random() * characters.length)];
+  }
+  inputTwo.value = returnValueTwo;
+  console.log(returnValue, returnValueTwo);
 });
-
-// function getRandomPassword() {
-
-// }
-// getRandomPassword();
-// console.log(inputOne, inputTwo);
-// inputOne.value += "test";
