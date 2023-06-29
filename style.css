@@ -1,20 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #1f2937;
   margin: 0;
-
+  padding: 0;
+  min-width: 360px;
   font-family: "Inter", sans-serif;
 }
 
 .head-section {
+  text-align: center;
   padding: 0;
-  margin: 150px 0 0 52px;
+  margin: 5em auto;
 }
 
 h1 {
   font-family: "Karla", sans-serif;
   padding: 0;
-  margin: 0;
-  font-size: 45px;
+  margin: 5em auto 1em;
+  font-size: 2rem;
   color: #fff;
 }
 
@@ -23,24 +29,25 @@ h1 {
 }
 
 h2 {
-  font-size: 23px;
+  font-size: 1.125rem;
   color: #d5d4d8;
-  margin-top: 10px;
+  margin-top: 0.5em;
 }
 
 button {
-  margin-top: 45px;
+  margin-top: 1em;
   cursor: pointer;
   border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
+  border-radius: 0.45em;
+  padding: 1em 1.25em;
   background-color: #10b981;
   color: #fff;
-  font-size: 21px;
+  font-size: 1rem;
 }
 
 button:hover {
   background-color: #53cba3;
+  color: #1f2937;
 }
 
 .bottom-section {
@@ -54,14 +61,66 @@ button:hover {
 }
 
 input {
-  border-radius: 6px;
+  border-radius: 0.45em;
   text-align: center;
   border: none;
   background: #273549;
-  width: 350px;
-  height: 30px;
-  font-size: 18px;
-  margin: 0 20px;
+  width: 40%;
+  font-size: 0.8rem;
+  margin: 0 1.25em;
   color: #55f991;
-  padding: 10px 10px;
+  padding: 1em 1.125em;
+}
+
+@media (min-width: 768px) {
+  .head-section {
+    top: 3em;
+    text-align: left;
+    margin-left: 3em;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  button {
+    padding: 1em 1.25em;
+    font-size: 1.125rem;
+  }
+  input {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .head-section {
+    padding: 0;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  button {
+    padding: 1em 1.125em;
+    font-size: 1.125rem;
+  }
+  input {
+    width: 35%;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .head-section {
+    padding: 0;
+  }
+  h1 {
+    font-size: 3.125rem;
+  }
+  h2 {
+    font-size: 1.725rem;
+  }
 }
