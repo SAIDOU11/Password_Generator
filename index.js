@@ -110,5 +110,4 @@ button.addEventListener("click", () => {
     returnValueTwo += characters[Math.floor(Math.random() * characters.length)];
   }
   inputTwo.value = returnValueTwo;
-  console.log(returnValue, returnValueTwo);
 });
